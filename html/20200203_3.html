@@ -4,20 +4,21 @@
         <meta charset="utf-8">
         <title>css 실습</title>
         <style>
-            body >div  {
-                color : green; 
-                font-size:30px;     
-                border:2px solid slategray;
-                padding:30px; /*border와 패딩과 같은 배치와 관련된 속성들은 상속을 받지않음*/
+            
+            #myspan {
+                color:red;
+            }
+            #JungHyeok>p:nth-child(2){
+                color:red;
             }
         </style>
     </head>
     <body>
         <div>
-            <span>my text is upper!</span>
+            <span id="myspan">my text is upper!</span>
             <ul>
                 <li>
-                    <span>my text is dummy</span>
+                    <span id="myspan">my text is dummy</span>
                     <div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -27,8 +28,16 @@
                            sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     </div>
                 </li>
-                <li></li>
+                
+                
             </ul>
+            <div id="JungHyeok">
+                <h2>단락 선택</h2>
+                <p>첫번째 단락입니다.</p>
+                <p>두번째 단락입니다.</p>
+                <p>세번째 단락입니다.</p>
+                <p>네번째 단락입니다.</p>
+            </div>
         </div>
     </body>
 </html>
