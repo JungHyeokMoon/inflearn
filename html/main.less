@@ -1,0 +1,34 @@
+@base_width:300px;
+@base_height:200px;
+@gray_border:1px solid gray;
+@text-base-color:gray;
+.wrap{
+    width: @base_width;
+    height: @base_height;
+    border: @gray_border;
+    padding:1rem;
+    margin:0px auto;
+    
+
+}
+.wrap >h3{
+    text-align: center;
+    color:@text-base-color;
+}
+.content{
+    width: 200px;
+    height: @base_height/2;
+    border:@gray_border;
+    margin:0px auto;
+    li{
+        list-style: none;
+        a{
+            color:@text-base-color;
+        }
+    }
+}
+
+footer ul{
+    .content;
+    margin-top:12px;
+}
