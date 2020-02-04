@@ -5,6 +5,10 @@
         <title>Transition</title>
         
         <style>
+            .wrap{
+                position: relative;
+                transform: translate3d(40px,0,0);
+            }
             .box{
                 width: 100px;
                 height: 100px;
@@ -12,17 +16,28 @@
                 background-color: slategray;
                 text-align: center;
                 line-height: 100px;
-                transition: all 1s ease-in;
+                position: absolute;
+                /* transition: all 1s ease-in; */
                 
+            }
+            .box:nth-child(2){
+                /* left:100px; */
+                /* transform: rotate(10deg); */
+                transform: translate3d(100px,0,0);
+            }
+            .box:nth-child(3){
+                /* left:200px; */
+                transform: translate3d(200px,0,0);
+                /* 배치할때 translate 브라우저렌더링이좋다 */
             }
         </style>
         
     </head>
     <body>
-
-        
-        <div class="box">
-            box!
+        <div class="wrap">
+            <div class="box">box 1</div>
+            <div class="box">box 2</div>
+            <div class="box">box 3</div>
         </div>
     </body>
     <script src="box.js"></script>
