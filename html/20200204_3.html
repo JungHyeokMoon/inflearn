@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>z-index 속성의이해</title>
+        <style>
+            .wrap>div{
+                color:white;
+                width: 100px;
+                height: 100px;
+                margin:0.5rem;
+                position: absolute;
+            }
+            .wrap>div:nth-child(1){
+                background-color: red;
+                top:10px;
+                left:10px;
+                /* z-index: 1; */
+            }
+            .wrap>div:nth-child(2){
+                background-color: green;
+                top:30px;
+                left:30px;
+            }
+            .wrap>div:nth-child(3){
+                background-color: blue;
+                top:50px;
+                left:50px;
+            }
+            .wrap2{
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                /* top:100px; */
+                /* left:100px; */
+                background-color: steelblue;
+            }
+            /* 부모의 zindex, 그후 자신의것을 비교해야함 */
+            /* 부모가 작으면 큰 다른부모를 넘을수없음 */
+        
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <div>first</div>
+            <div>second</div>
+            <div>third</div>
+        </div>
+
+        <div class="wrap2">
+            another....
+        </div>
+    </body>
+</html>
