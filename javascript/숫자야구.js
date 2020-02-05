@@ -1,12 +1,17 @@
 var body = document.body;
+var candidate;
+var numarr;
 
-var candidate = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-var numarr = [];
+function PickNumber() {
+    candidate = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    numarr = [];
 
-for (var i = 0; i < 4; i++) {
-    var picked = candidate.splice(Math.floor(Math.random() * (9 - i)), 1)[0];
-    numarr.push(picked);
+    for (var i = 0; i < 4; i++) {
+        var picked = candidate.splice(Math.floor(Math.random() * (9 - i)), 1)[0];
+        numarr.push(picked);
+    }
 }
+PickNumber();
 console.log(numarr);
 //배열 메서드 push : 마지막추가 , pop : 마지막빼기 , unshift : 처음에추가 , shift : 처음 것 뽑기
 //splice (위치 , 개수 )위치부터 개수만큼뽑음
@@ -22,7 +27,7 @@ form.append(input);
 var button = document.createElement('button');
 button.textContent = '입력!';
 form.append(button);
-var letmeknow=document.createElement('div');
+var letmeknow = document.createElement('div');
 form.append(letmeknow);
 
 var fault = 0;
@@ -30,37 +35,24 @@ form.addEventListener('submit', function (evt) {
     evt.preventDefault();
     var answer = input.value;
     console.log(answer);
-     if (answer === numarr.join('')) {
-         count.textContent = '홈런';
-         input.value = '';
-         input.focus();
-          var candidate = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-           numarr = [];
+    if (answer === numarr.join('')) {
+        count.textContent = '홈런';
+        input.value = '';
+        input.focus();
+        PickNumber();
+        fault = 0;
+    }
+    else {
+        fault++;
 
-          for (var i = 0; i < 4; i++) {
-              var picked = candidate.splice(Math.floor(Math.random() * (9 - i)), 1)[0];
-              numarr.push(picked);
-          }
-          console.log(numarr);
-         fault = 0;
-     }
-     else {
-         fault++;
-        
-        letmeknow.textContent=String(4-fault)+'You have chance';
-        
+        letmeknow.textContent = String(4 - fault) + 'You have chance';
+
         if (fault >= 4) {
             count.textContent = 'You Failed 4 chance,Game Over' + 'Original Answer' + numarr.join(',');
             input.focus();
             input.value = '';
 
-            var candidate = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-            numarr = [];
-
-            for (var i = 0; i < 4; i++) {
-                var picked = candidate.splice(Math.floor(Math.random() * (9 - i)), 1)[0];
-                numarr.push(picked);
-            }
+            PickNumber();
             console.log(numarr);
             fault = 0;
         } else {
