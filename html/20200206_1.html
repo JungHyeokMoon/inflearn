@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3-ColumnLayout</title>
+    <style>
+        #wrap{
+            border: 1px solid #bcbcbc;
+            width: 940px;
+            margin: 0px auto; 
+            /* 가운데정렬 */
+            padding:20px;
+        }
+        #wrap >#header{
+            padding: 20px;
+            border: 1px solid #bcbcbc;
+            margin-bottom: 20px;
+        }
+        #wrap >#left-sidebar{
+            border: 1px solid #bcbcbc;
+            margin-bottom: 20px;
+            margin-right: 20px;
+            width: 160px;
+            padding: 20px;
+            float:left;
+        }
+        #wrap > #content{
+            border: 1px solid #bcbcbc;
+            margin-bottom: 20px;
+            width: 450px;
+            padding:20px;
+            float:left;
+        }
+        #wrap > #right-sidebar{
+            float:right;
+            width: 160px;
+            padding: 20px;
+            border: 1px solid #bcbcbc;
+            margin-bottom: 20px;
+        }
+        #wrap >#footer{
+            border: 1px solid #bcbcbc;
+            margin: 20px;
+            padding:20px;
+            clear:both;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header"><h1>3-ColumnLayout</h1></div>
+        <div id="left-sidebar">
+            <h3>sidebar</h3>
+            <ul>
+                <li>Lorem</li>
+                <li>Ipsum</li>
+                <li>Dolor</li>
+            </ul>
+        </div>
+        <div id="content">
+            <h3>Content</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec mollis nulla. Phasellus lacinia tempus mauris eu laoreet. Proin gravida velit dictum dui consequat malesuada. Aenean et nibh eu purus scelerisque aliquet nec non justo. Aliquam vitae aliquet ipsum. Etiam condimentum varius purus ut ultricies. Mauris id odio pretium, sollicitudin sapien eget, adipiscing risus.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec mollis nulla. Phasellus lacinia tempus mauris eu laoreet. Proin gravida velit dictum dui consequat malesuada. Aenean et nibh eu purus scelerisque aliquet nec non justo. Aliquam vitae aliquet ipsum. Etiam condimentum varius purus ut ultricies. Mauris id odio pretium, sollicitudin sapien eget, adipiscing risus.</p>
+        </div>
+        <div id="right-sidebar">
+            <h3>sidebar</h3>
+            <ul>
+                <li>Lorem</li>
+                <li>Ipsum</li>
+                <li>Dolor</li>
+            </ul>
+        </div>
+        <div id="footer"><p>Copyright</p></div>
+    </div>
+    
+</body>
+</html>
