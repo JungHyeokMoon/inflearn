@@ -65,30 +65,42 @@ function ballcolor(number, window) {
     ball.style.backgroundColor = color;
     window.appendChild(ball);
 }
-
-function lotto() {
-    setTimeout(function () {
-        ballcolor(ret[0], answerwindow);
-    }, 1000);//밀리초
-    setTimeout(function () {
-        ballcolor(ret[1], answerwindow);
-    }, 2000);//밀리초
-    setTimeout(function () {
-        ballcolor(ret[2], answerwindow);
-    }, 3000);//밀리초
-    setTimeout(function () {
-        ballcolor(ret[3], answerwindow);
-    }, 4000);//밀리초
-    setTimeout(function () {
-        ballcolor(ret[4], answerwindow);
-    }, 5000);//밀리초
-    setTimeout(function () {
-        ballcolor(ret[5], answerwindow);
-    }, 6000);//밀리초
-    setTimeout(function () {
-        ballcolor(bonusnumber, bonuswindow);
-    }, 7000);
-}
+console.log(ret, ret.length);
+// function lotto() {
+//     setTimeout(function () {
+//         ballcolor(ret[0], answerwindow);
+//     }, 1000);//밀리초
+//     setTimeout(function () {
+//         ballcolor(ret[1], answerwindow);
+//     }, 2000);//밀리초
+//     setTimeout(function () {
+//         ballcolor(ret[2], answerwindow);
+//     }, 3000);//밀리초
+//     setTimeout(function () {
+//         ballcolor(ret[3], answerwindow);
+//     }, 4000);//밀리초
+//     setTimeout(function () {
+//         ballcolor(ret[4], answerwindow);
+//     }, 5000);//밀리초
+//     setTimeout(function () {
+//         ballcolor(ret[5], answerwindow);
+//     }, 6000);//밀리초
+//     setTimeout(function () {
+//         ballcolor(bonusnumber, bonuswindow);
+//     }, 7000);
+// }
+function lotto(){
+    for(var i=0 ; i<ret.length; i++){
+        function closure(j){
+            setTimeout(function(){
+                ballcolor(ret[j],answerwindow);
+            },(j+1)*1000);
+        }(i);
+    }
+    setTimeout(function(){
+        ballcolor(bonusnumber,bonuswindow);
+    },7000);
+};
 lotto();
 
 function delete_ball(inputArr){
