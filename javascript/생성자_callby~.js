@@ -38,3 +38,4 @@
 
 // var Junghyeok=new Card('JungHyeok',10,10);
 // console.log(Junghyeok);
+
