@@ -1,32 +1,45 @@
-#tetris{
+#tetris, #next-table {
     border-collapse: collapse;
 }
-#tetris td{
+#next-table {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+#tetris td {
     border: 1px solid black;
     width: 30px;
     height: 30px;
 }
-td.white{
+#next-table td {
+    border: 1px solid black;
+    width: 15px;
+    height: 15px;
+}
+td.white {
     background-color: white;
 }
-td.red{
+td.red {
     background-color: red;
 }
-td.blue{
+td.blue {
     background-color: blue;
 }
-td.orange{
+td.orange {
     background-color: orange;
 }
-td.skyblue{
-    background-color: skyblue;
+td.green {
+    background-color: green;
 }
-td.yellowgreen{
-    background-color: yellowgreen;
+td.navy {
+    background-color: navy;
 }
-td.pink{
-    background-color: pink;
+td.violet {
+    background-color: violet;
 }
-td.yellow{
+td.yellow {
     background-color: yellow;
+}
+td.black {
+    background-color: black;
 }
